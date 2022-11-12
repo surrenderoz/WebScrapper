@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.port || 3000;
 
 
-const website = ''; //provide Url
+const website = 'https://www.cupidbaba.com/your-account/change-password/';
 let content = [];
 
 let NumberVal = 200;
@@ -30,8 +30,7 @@ const getVV = async _ => {
             const url = $(this).find('input').attr('value');
             if(url != '' && url != undefined) {
                 content.push({
-                    title,
-                    url,
+                    [title]: url
                   });
                 let fileData = JSON.stringify(content)
            
