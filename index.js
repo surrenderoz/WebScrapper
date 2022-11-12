@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.port || 3000;
 
 
-const website = 'https://www.cupidbaba.com/your-account/change-password/';
+const website = ''; 
 let content = [];
 
 let NumberVal = 200;
@@ -15,13 +15,10 @@ let NumberVal = 200;
 
 const getVV = async _ => {
     setTimeout(async () => {
-
         console.log(NumberVal);
-
-
         const res = await  axios(website, {
             headers: {
-                Cookie: `msl-data=%7B%22user_id%22%3A%22${NumberVal}%22%2C%22user_name%22%3A%22Rohan%22%2C%22guest_user%22%3A0%7D`
+                Cookie: ''
             }
         })
         const $ = cheerio.load(res.data);
